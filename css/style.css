@@ -160,7 +160,7 @@ body {
 #saveThePet h2 {
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 4em;
+    font-size: 3em;
     color: #232323;
     color: #232323;
     padding-bottom: 30px;
@@ -208,6 +208,7 @@ nav li {
     list-style-type: none;
     /* ohne Aufzählungspunkte */
     width: 110px;
+    text-align: center;
 }
 
 nav li a {
@@ -218,20 +219,28 @@ nav li a {
     font: Arial, Helvetica, sans-serif;
 }
 
+nav li > ul {
+    display:none;
+}
+
+nav li:hover > ul {
+    display: block;
+    position: absolute;
+}
+
+
 .widthLimit {
-    width: 960px;
+    width: 1100px;
     margin: auto;
 }
 
-#contentFirst,
-#contentSecond {
+.content {
     padding: 20px 0;
     display: flex;
     justify-content: center;
 }
 
-#contentFirst>div,
-#contentSecond>div {
+.content>div {
     flex: 1 1 0;
     min-width: 0;
 }
@@ -241,19 +250,26 @@ nav li a {
     border-right: 2px dotted #E1533C;
 }
 
-#volunteer h1 {
-    font-size: 3em;
-    color: #E1533C;
-}
-
 #adoptableDogs {
     padding-right: 20px;
 }
 
-#contentFirst h2,
-#contentSecond h2 {
+.content h1 {
+    text-transform: uppercase;
+    font-size: 3em;
+    color: #E1533C;    
+}
+
+.content h2 {
     display: block;
     font-size: 2em;
+    color: #E1533C;
+}
+
+.content h3 {
+    display: block;
+    font-size: 1em;
+    font-weight: bold;
     color: #E1533C;
 }
 
@@ -275,8 +291,17 @@ nav li a {
     margin-left: 30px;
 }
 
-#volunteer>p {
-    padding-top: 10px;
+/* Selektiert alle h3, die nach einem h1 kommen */
+
+h1 ~ h3 {
+    padding-top: 20px;
+    padding-left: 50px;
+}
+
+/* Selektiert alle p, die nach einem h1 kommen */
+h1 ~ p
+ {
+    padding-top: 5px;
     padding-left: 50px;
 }
 
@@ -285,7 +310,156 @@ nav li a {
     padding-left: 30px;
 }
 
+#payment {
+    display: flex;
+    background: url("../img/pricePicture.png") no-repeat top left;
+    width: 540px;
+    height: 214px;
+}
+
+#payment > div {
+    min-width: 0;
+}
+
+#payment h1 {
+    font-size: 2.5em;
+}
+
+#payment h2 {
+    font-size: 1.5em;
+}
+
+#dollar {    
+    text-align: center;
+    position: relative;
+    top: 35px;
+    left: 50px;
+}
+
+#dollar > h2 {
+    padding-top: 55px;
+}
+
+#dollarDescription {  
+    position: relative;
+    top: 35px;
+    left: 105px;
+    width: 260px;
+}
+
 #footer {
-    height: 40px;
-    background: #33FF66;
+    height: 114px;
+    background: #E1533C;
+}
+
+#footerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#footerContainer > div{
+    min-width: 0;
+    flex: 1 1 0;
+    color: #fff;
+    padding-top: 10px;    
+}
+
+#footerContainer > div > * {
+    display: inline;
+}
+
+#copyright {
+    display: flex;
+}
+
+#footerContainer h2 {
+    font-size: 2em;
+    padding-right: 10px;
+}
+
+#footerContainer img {
+    vertical-align: middle;
+    padding: 0 10px;
+}
+
+#footerContainer #youtube {
+    min-width: 300px;
+}
+
+#cat {
+    width: 717px;
+    height: 516px;
+    background: url("../img/katze.png") no-repeat top left;
+}
+
+/* halber Bildschirm */
+@media screen and (max-width: 960px) {
+
+    .widthLimit
+    {
+        width: 850px;
+    }
+
+    #dollarDescription {
+        width: 200px;
+    }
+}
+
+/* Telefone */
+@media all  and (max-width: 360px) {
+
+   .widthLimit {
+       width: auto;
+   }
+
+    .content,
+    #subheader {
+        display: block !important;
+    }
+
+    .content > *,
+    #subheader > * {
+        flex: none !important;
+    }
+
+    #cat {
+        width: 360px;
+        height: 259px;
+        background: url("../img/katze_android.png") no-repeat top left;
+    }    
+
+    #payment {
+        background: url("../img/pricePicture_android.png") no-repeat top left;
+        width: 360px;
+        height: 142px;
+    }
+
+    #dollar {
+        top: 24px;
+        left: 28px;
+    }
+    
+    #dollar > h2 {
+        padding-top: 10px;
+        font-size: 1.1em;
+    }   
+
+    #dollarDescription {
+        top: 10px;
+        left: 60px;
+    }
+
+    #footer {
+        height: auto;
+    }
+
+    #footerContainer {
+        display: block;
+    }
+    
+    #footerContainer h2 {
+        padding-left: 10px;
+    }
+
 }

@@ -5,6 +5,7 @@
     <link rel="shortcut icon" href="https://www.wix.com/favicon.ico" type="image/x-icon">
     <title>Animal Shelter</title>
     <link href="./css/style.css" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width" />
 </head>
 
 <body>
@@ -15,14 +16,18 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="adoptions.html">Adoptions</a></li>
-                    <li><a href="volunteer.html">Volunteer</a></li>
+                    <li><a href="volunteer.html">Volunteer</a>
+                        <ul>
+                            <li><a href="donate.html">Donate</a></li>
+                        </ul>
+                    </li>
                     <li><a href="conact.html">Conact Us</a></li>
                 </ul>
             </nav>
         </div>
         <div id="subheader">
             <div id="saveThePetImage">
-                <img src="./img/katze.png" />
+                <div id="cat"></div>
             </div>
             <div id="saveThePet" class="topBorderDotted bottomBorderDotted">
                 <h1 class="topBorderDotted">Save a pet</h1>
@@ -31,7 +36,7 @@
                 <h2 class="bottomBorderDotted" />
             </div>
         </div>
-        <div id="contentFirst" class="widthLimit">
+        <div id="contentFirst" class="content widthLimit">
             <div id="volunteer">
                 <h1>&#10022; Volunteer</h1>
                 <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double
@@ -68,7 +73,8 @@
                 </div>
             </div>
         </div>
-        <div id="contentSecond" class="widthLimit">
+
+        <div id="contentSecond" class="content bottomBorderDotted widthLimit">
             <div id="adoptableDogs">
                 <h2>&#10022; Adoptable dogs</h2>
                 <img src="./img/dogOfTheWeek.webp" />
@@ -78,8 +84,52 @@
                 <img src="./img/catOfTheWeek.webp" />
             </div>
         </div>
+
+        <div id="contentThird" class="content widthLimit">
+            <div id="payment">
+                <div id="dollar">
+                    <h1>Only</h1>
+                    <h1><strong>35$</strong></h1>
+                    <h2>Valid till June</h2>
+                </div>
+                <div id="dollarDescription">
+                    <h2>$35 Spay/Neuter for Cats and Kittens!</h2>
+                    <p>To help fight feline overpopulation, we are offering to spay or neuter your cat or kitten for only $35.</p>
+                </div>
+            </div>
+            <div id="events">
+                <h1>&#10022; Events</h1>
+                <h3>Special Adoption Day at Golden Gate Park - 1/11/23, 1pm​</h3>
+                <p>
+                    I'm a paragraph. Click here to add your own text and edit me. I’m a great place for you to tell a story and let your users
+                    know a little more about you.
+                </p>
+                <h3>National Adoption Event at Fisherman's Wharf - 12/12/23, 11am</h3>
+                <p>
+                    I'm a paragraph. Click here to add your own text and edit me. I’m a great place for you to tell a story and let your users
+                    know a little more about you.
+                </p>
+            </div>
+        </div>
         <div id="footer">
-            <p>This is the Footer</p>
+            <div id="footerContainer" class="widthLimit">
+                <div id="copyright">
+                    <h2>&#10022;</h2>
+                    <span>&copy; 2017 by Richard Blechschmidt. Proudly created with support by his awesome cousin.</span>
+                </div>
+                <div id="twitter">
+                    <img src="./img/twitter.png" />
+                    <span>Follow us on Twitter</span>
+                </div>
+                <div id="facebook">
+                    <img src="./img/facebook.png" />
+                    <span>Follow us on Facebook</span>
+                    </div>
+                <div id="youtube">
+                    <img src="./img/youtube.png" />
+                    <span>Watch adoptable animals on YouTube</span>
+                    </div>                    
+            </div>
         </div>
     </div>
 </body>
