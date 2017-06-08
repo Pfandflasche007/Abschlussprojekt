@@ -240,6 +240,10 @@ nav li:hover > ul {
     justify-content: center;
 }
 
+.content.noFlex {
+    display: block;
+}
+
 .content>div {
     flex: 1 1 0;
     min-width: 0;
@@ -393,6 +397,16 @@ h1 ~ p
     background: url("../img/katze.png") no-repeat top left;
 }
 
+
+#animalGrid > img {
+    background: #fff;
+    padding:  5px;
+    display: inline-block;
+    margin: 15px;
+    box-shadow: 0 3px 5px 0 #888;
+}
+
+
 /* halber Bildschirm */
 @media screen and (max-width: 960px) {
 
@@ -403,6 +417,10 @@ h1 ~ p
 
     #dollarDescription {
         width: 200px;
+    }
+
+    #animalGrid > img {
+        margin: 10px;
     }
 }
 
@@ -460,6 +478,11 @@ h1 ~ p
     
     #footerContainer h2 {
         padding-left: 10px;
+    }
+
+    #animalGrid > img {
+        display: block;
+        margin: 20px auto;
     }
 
 }
