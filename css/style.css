@@ -277,6 +277,14 @@ nav li:hover > ul {
     color: #E1533C;
 }
 
+.content h4 {
+    display: block;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #000;
+    padding-bottom: 10px;
+}
+
 #catOfTheWeek,
 #dogOfTheWeek {
     padding: 20px;
@@ -406,7 +414,8 @@ h1 ~ p
     box-shadow: 0 3px 5px 0 #888;
 }
 
-#volunteerText p {
+#volunteerText p,
+#donateText p {
     padding-right: 20px;
     padding-bottom: 10px;
 }
@@ -442,13 +451,45 @@ h1 ~ p
     
 }
 
-#sendButton {
+.shelterButton {
     font-size: 2em;
-    float: right;
-    margin-right: 5px;
     background: #E1533C;
     border: 1px solid #888;
     color: #fff;
+}
+
+#sendButton {
+    float: right;
+    margin-right: 5px;
+}
+
+#donateImageWrapper {
+    margin: auto;
+}
+
+#donateImageWrapper .content  {
+    margin-top: 10px;
+    justify-content: space-around;
+}
+
+#donateImage {
+    background: url("../img/donate.png") no-repeat top left;
+    width: 335px;
+    height: 367px;
+    margin: auto;
+}
+
+#donateImageWrapper h1,
+#donateImageWrapper h2 {
+    text-align: center;
+    color: #000;
+    font-size: 2.5em;
+    text-transform: uppercase;  
+    padding-bottom: 5px;  
+}
+
+#donateImageWrapper h2 {
+    font-size: 1.5em;
 }
 
 /* halber Bildschirm */
