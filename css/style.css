@@ -406,6 +406,50 @@ h1 ~ p
     box-shadow: 0 3px 5px 0 #888;
 }
 
+#volunteerText p {
+    padding-right: 20px;
+    padding-bottom: 10px;
+}
+
+#volunteerImageWrapper {
+    border: 10px solid white;
+    width: 392px;
+    height: 358px;
+    flex: none;
+    box-shadow: 0 3px 5px 0 #888;
+}
+
+#volunteerImage {
+    background: url("../img/volunteer.png") no-repeat top left;
+    width: 392px;
+    height: 358px;
+}
+
+#helpText {
+    padding-right: 20px;
+}
+
+#helpFormular input,
+#helpFormular textarea {
+    padding: 5px;
+    margin: 2px 0 2px 2px;
+    width: 250px;
+    height: 15px;
+}
+
+#helpFormular textarea {
+    height: 83px;
+    
+}
+
+#sendButton {
+    font-size: 2em;
+    float: right;
+    margin-right: 5px;
+    background: #E1533C;
+    border: 1px solid #888;
+    color: #fff;
+}
 
 /* halber Bildschirm */
 @media screen and (max-width: 960px) {
@@ -422,6 +466,16 @@ h1 ~ p
     #animalGrid > img {
         margin: 10px;
     }
+
+    #helpFormular input,
+    #helpFormular textarea {
+        width: 185px;
+    }
+
+    #sendButton {
+        margin-right: 10px;
+    }
+    
 }
 
 /* Telefone */
@@ -469,6 +523,7 @@ h1 ~ p
     }
 
     #footer {
+        clear: both;
         height: auto;
     }
 
@@ -483,6 +538,27 @@ h1 ~ p
     #animalGrid > img {
         display: block;
         margin: 20px auto;
+    }
+
+    #volunteerImageWrapper {
+        width: 340px;
+        height: 309px;    
+    }
+
+    #volunteerImage {
+        background: url("../img/volunteer_android.png") no-repeat top left;
+        width: 340px;
+        height: 309px;
+    }
+
+    #helpFormular input,
+    #helpFormular textarea {
+        width: 340px;
+    }
+
+    #sendButton {
+        margin-right: 10px;
+        margin-bottom: 10px;
     }
 
 }
